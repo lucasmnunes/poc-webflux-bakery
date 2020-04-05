@@ -1,5 +1,6 @@
 package poc.webflux.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ public class ItemController {
 
     private ItemService service;
 
+    @Autowired
     ItemController(ItemService service) {
         this.service = service;
     }
